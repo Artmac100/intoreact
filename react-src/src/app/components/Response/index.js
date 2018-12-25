@@ -10,13 +10,13 @@ const Response = () => {
 
   if (error) return <div>{error}</div>;
 
-  return (
+  return users.length ? (
     <div>
-      {users.length
-        ? users.map(user => <ResponseItem key={user.id} user={user} />)
-        : null}
+      {users.map(user => (
+        <ResponseItem key={user.id} user={user} />
+      ))}
     </div>
-  );
+  ) : null;
 };
 
 // memoized in case of the same query

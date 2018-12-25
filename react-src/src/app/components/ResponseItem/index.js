@@ -5,7 +5,7 @@ import Anchor from "../Anchor";
 import InfoField from "../InfoField";
 
 const ResponseItem = ({ user }) => (
-  <div>
+  <>
     {Object.keys(user).map(field => {
       if (/_url/.test(field)) {
         return (
@@ -20,7 +20,7 @@ const ResponseItem = ({ user }) => (
         />
       );
     })}
-  </div>
+  </>
 );
 
 ResponseItem.propTypes = {
